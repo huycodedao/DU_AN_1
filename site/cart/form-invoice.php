@@ -31,11 +31,11 @@
         <div class="form-group">
             <label for="">Phương thức thanh toán </label>
             <br>
-            <input type="radio" name="phuong_thuc_tt" id="" value="0" checked placeholder="" aria-describedby="helpId">
+            <input type="radio" name="phuong_thuc_tt" id="" value="tiền mặt" checked placeholder="" aria-describedby="helpId">
             Tiền mặt
-            <input type="radio" name="phuong_thuc_tt" id="" value="1" placeholder="" aria-describedby="helpId"> Chuyển
+            <input type="radio" name="phuong_thuc_tt" id="" value="chuyển khoản" placeholder="" aria-describedby="helpId"> Chuyển
             khoản ngân hàng
-            <input type="radio" name="phuong_thuc_tt" id="" value="2" placeholder="" aria-describedby="helpId"> Ví điện
+            <input type="radio" name="phuong_thuc_tt" id="" value="ví điện tử" placeholder="" aria-describedby="helpId"> Ví điện
             tử
         </div>
         <input type="hidden" name="trang_thai" value="0">

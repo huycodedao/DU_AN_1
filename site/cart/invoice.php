@@ -15,7 +15,7 @@ if (isset($_POST['btn_thanh_toan'])) {
     $sdt = $_POST['sdt'];
     $dia_chi = $_POST['dia_chi'];
     $phuong_thuc_tt = $_POST['phuong_thuc_tt'];
-    $trang_thai = $_POST['trang_thai']; // Đảm bảo bạn có trường này trong bảng hoa_don hoặc loại bỏ nếu không cần thiết
+    $trang_thai = $_POST['trang_thai']; 
     $ghi_chu = $_POST['ghi_chu'];
 
     try {
@@ -59,7 +59,7 @@ if (isset($_POST['btn_thanh_toan'])) {
         unset($_SESSION['tien']);
 
         //chuyển hướng 
-       
+       header("location: $SITE_URL/hang-hoa/liet-ke.php");
         // exit;
     } catch (PDOException $e) {
         // Xảy ra lỗi, hủy bỏ giao dịch và in ra thông báo lỗi
