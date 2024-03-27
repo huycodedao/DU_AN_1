@@ -6,7 +6,7 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-                    <h1 class="fw-bolder mb-1">Chào mừng bạn đến với Bài viết</h1>
+                    <h1 class="fw-bolder mb-1">Pandora thương hiệu uy tín</h1>
                     <!-- Post meta content-->
                     <div class="text-muted fst-italic mb-2">Đăng vào ngày 1 tháng 1 năm 2021 bởi Admin</div>
                     <!-- Post categories-->

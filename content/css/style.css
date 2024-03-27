@@ -65,7 +65,7 @@ a {
     color: #545454;
 }
 .widget-header a:hover {
-    color: #3167eb;
+    color: #ec2121;
 }
 .widget-header i {
     color: #969696;
@@ -82,7 +82,7 @@ a {
     right: -10px;
 }
 .widget-header:hover i {
-    color: #3167eb;
+    color: #e53027;
 }
 
 .notify {
@@ -253,7 +253,7 @@ a.itemside {
 }
 
 .category_block li:hover {
-    background-color: #007bff;
+    background-color: #ff5500;
 }
 .category_block li:hover a {
     color: #ffffff;
@@ -459,7 +459,7 @@ a.itemside {
 .btn-outline-primary {
     border-color: #ef330d;
     background-color: transparent;
-    color: #0da9ef;
+    color: #ef240d;
 }
 
 .btn-sm {
