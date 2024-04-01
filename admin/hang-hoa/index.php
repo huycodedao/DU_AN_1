@@ -8,10 +8,12 @@ check_login();
 
 
 extract($_REQUEST);
+
+
 if (exist_param("btn_list")) {
 
     //show dữ liệu
-    $items = hang_hoa_select_page('ma_hh', 10);
+    $items = hang_hoa_select_page('ma_hh', 1000);
     $VIEW_NAME = "list.php";
 } 
 else if (exist_param("btn_insert")) {

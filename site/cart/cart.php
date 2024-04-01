@@ -40,7 +40,7 @@ if (isset($_SESSION['cart'])) {
                     <td><span><?= number_format($item['giam_gia'], 0, ".") ?></span> đ <input type="hidden"
                             class="giam_gia_an" name="giam_gia" value="<?= $item['giam_gia'] ?>"></td>
                     <td class="pt-1 m-auto">
-                        <form action="delete_cart.php?act=update_sl" method="post">
+                        <form action="delete-cart.php?act=update_sl" method="post">
                             <input type="number" class="form-control sl" name="update_sl" onchange="this.form.submit()"
                                 value="<?= $item['sl'] ?>" min="1" max="10">
                             <input type="hidden" class="form-control" name="ma_hh" value="<?= $index ?>">
