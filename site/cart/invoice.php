@@ -59,7 +59,7 @@ if (isset($_POST['btn_thanh_toan'])) {
         unset($_SESSION['tien']);
 
         //chuyển hướng 
-       header("location: $SITE_URL/hang-hoa/liet-ke.php");
+        header("location: $SITE_URL/hang-hoa/liet-ke.php");
         // exit;
     } catch (PDOException $e) {
         // Xảy ra lỗi, hủy bỏ giao dịch và in ra thông báo lỗi

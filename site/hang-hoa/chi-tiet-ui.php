@@ -71,8 +71,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <a href="../cart/list-cart.php" class="btn btn-danger btn-lg btn-block text-uppercase">
+                        
+                        <a href="<?= $SITE_URL . "/cart/add-cart.php?id=" . $_GET['ma_hh'] ?>" class="btn btn-danger btn-lg btn-block text-uppercase">
                             <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
                         </a>
                     </form>
