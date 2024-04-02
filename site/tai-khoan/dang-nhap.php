@@ -23,12 +23,12 @@ if (exist_param("btn_login")) {
             if($user['vai_tro']!=0){
                 echo "<script>
                      alert('Đăng nhập tài khoản " . $ten_vai_tro . "thành công!'); 
-                     location.href='http://localhost/duan/admin/trang-chinh/index.php';
+                     location.href='http://localhost/git_du_an/admin/trang-chinh/index.php';
                 </script>";
             }else{
                 echo "<script>
                      alert('Đăng nhập tài khoản " . $ten_vai_tro . "thành công!'); 
-                     location.href='http://localhost/duan/site/trang-chinh/index.php';
+                     location.href='http://localhost/git_du_an/site/trang-chinh/index.php';
                 </script>";
             }
             
