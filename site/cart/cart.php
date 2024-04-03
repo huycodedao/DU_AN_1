@@ -79,4 +79,7 @@ if (isset($_SESSION['cart'])) {
         <a class="btn btn-outline-dark col-12" href="<?= $ROOT_URL ?>"> Về trang chủ</a>
     </div>
     <?php } ?>
+    <div class="row m-1 pb-5">
+        <a class="btn btn-outline-dark col-12" href="<?= $SITE_URL . "/cart/lich_su.php" ?>"> lịch sử đơn hàng</a>
+    </div>
 </div>

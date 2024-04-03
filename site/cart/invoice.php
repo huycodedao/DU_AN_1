@@ -36,7 +36,10 @@ if (isset($_POST['btn_thanh_toan'])) {
         $dbh->beginTransaction();
 
         // Tính tổng giá từ giỏ hàng
-        $tong_gia = 0; // Giả sử bạn đã tính toán tổng giá trước đó
+        $tong_gia = 0;
+        foreach ($_SESSION['cart'] as $item) {
+            $tong_gia += ($item['don_gia'] - $item['giam_gia']) * $item['sl'];
+        }
 
         // Thực thi truy vấn với dữ liệu thay thế
         $stmt->execute([

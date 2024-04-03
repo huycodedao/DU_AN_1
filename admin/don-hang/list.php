@@ -1,12 +1,10 @@
 <div class="container">
     <div class="page-title">
         <h4 class="mt-5 font-weight-bold text-center">Danh sách đơn hàng</h4>
-        
     </div>
     <div class="box box-primary">
         <div class="box-body">
             <form action="?btn_delete_all" method="post" class="table-responsive">
-                
                 <table width="100%" class="table table-hover table-bordered text-center">
                     <thead class="thead-dark">
                         <tr>
@@ -15,38 +13,35 @@
                             <th>Ngày tạo</th>
                             <th>Ghi chú</th>
                             <th>Trạng thái</th>
-                            
-                            <th></th>
+                            <th>Giao hàng</th>
+                            <th>Hành động</th> <!-- Thêm cột Hành động -->
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                            foreach($items as $item){
-                                extract($item);
-                        ?>
+                        <?php foreach($items as $item): ?>
                         <tr>
-                            <td><?= 'Pandora-HD'.$ma_hd ?></td>
-                            <td><?= $ho_ten ?></td>
-                            <td><?= $ngay_nhap ?></td>
-                            <td><?= $ghi_chu ?></td>
+                            <td><?= 'Pandora-HD'.$item['ma_hd'] ?></td>
+                            <td><?= $item['ho_ten'] ?></td>
+                            <td><?= $item['ngay_nhap'] ?></td>
+                            <td><?= $item['ghi_chu'] ?></td>
                             <td><?php
-                                if($phuong_thuc_tt=="tiền mặt"){
-                                    echo "đã thanh toán";
-                                }
-                                else{
-                                    echo "chưa thanh toán";
-                                }
+                                echo $item['phuong_thuc_tt'] == "tiền mặt" ? "đã thanh toán" : "chưa thanh toán";
                             ?></td>
-                            <td><a href="in.php?id=">in hóa đơn</a></td>
+                            <td>
+                                <form action="cap_nhat_trang_thai_giao_hang.php" method="post">
+                                    <input type="hidden" name="ma_hd" value="<?= $item['ma_hd'] ?>">
+                                    <select name="trang_thai_giao_hang" onchange="this.form.submit()">
+                                        <option value="chưa giao" <?= $item['giao_hang'] == 'chưa giao' ? 'selected' : '' ?>>Chưa giao</option>
+                                        <option value="đang giao" <?= $item['giao_hang'] == 'đang giao' ? 'selected' : '' ?>>Đang giao</option>
+                                        <option value="đã giao" <?= $item['giao_hang'] == 'đã giao' ? 'selected' : '' ?>>Đã giao</option>
+                                    </select>
+                                </form>
+                            </td>
+                            <td><a href="in.php?id=<?= $item['ma_hd'] ?>">in hóa đơn</a></td> <!-- Điều chỉnh href để thêm ID đơn hàng -->
                         </tr>
-                        <?php
-                            }
-                        ?>
+                        <?php endforeach; ?>
                     </tbody>
-
                 </table>
-
-                
             </form>
         </div>
     </div>
