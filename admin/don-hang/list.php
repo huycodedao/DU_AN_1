@@ -1,3 +1,10 @@
+<?php
+
+if (!isset($items) || !is_array($items)) {
+    $items = []; 
+}
+
+?>
 <div class="container">
     <div class="page-title">
         <h4 class="mt-5 font-weight-bold text-center">Danh sách đơn hàng</h4>
@@ -14,7 +21,7 @@
                             <th>Ghi chú</th>
                             <th>Trạng thái</th>
                             <th>Giao hàng</th>
-                            <th>Hành động</th> <!-- Thêm cột Hành động -->
+                            <th>Hành động</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -28,7 +35,7 @@
                                 echo $item['phuong_thuc_tt'] == "tiền mặt" ? "đã thanh toán" : "chưa thanh toán";
                             ?></td>
                             <td>
-                                <form action="cap_nhat_trang_thai_giao_hang.php" method="post">
+                                <form action="cap_nhat.php" method="post">
                                     <input type="hidden" name="ma_hd" value="<?= $item['ma_hd'] ?>">
                                     <select name="trang_thai_giao_hang" onchange="this.form.submit()">
                                         <option value="chưa giao" <?= $item['giao_hang'] == 'chưa giao' ? 'selected' : '' ?>>Chưa giao</option>
@@ -37,7 +44,7 @@
                                     </select>
                                 </form>
                             </td>
-                            <td><a href="in.php?id=<?= $item['ma_hd'] ?>">in hóa đơn</a></td> <!-- Điều chỉnh href để thêm ID đơn hàng -->
+                            <td><a href="in.php?id=<?= $item['ma_hd'] ?>">In hóa đơn</a></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
