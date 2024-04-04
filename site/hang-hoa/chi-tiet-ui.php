@@ -52,7 +52,7 @@
                     <!-- <p class="price_discounted">149.90 $</p> -->
                     <form method="get" action="cart.html">
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label>Số lượng :</label>
                             <div class="input-group mb-3 justify-content-center">
                                 <div class="input-group-prepend">
@@ -71,8 +71,8 @@
                                 </div>
                             </div>
                         </div>
-
-                        <a href="../cart/list-cart.php" class="btn btn-danger btn-lg btn-block text-uppercase">
+                         -->
+                        <a href="<?= $SITE_URL . "/cart/add-cart.php?id=" . $_GET['ma_hh'] ?>" class="btn btn-danger btn-lg btn-block text-uppercase">
                             <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
                         </a>
                     </form>

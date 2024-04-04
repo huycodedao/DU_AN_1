@@ -66,7 +66,7 @@
             <a href="<?= $ADMIN_URL ?>/thong-ke/"><i class="fas fa-chart-line"></i></i>Thống kê</a>
         </li>
         <li>
-            <a href="<?= $ADMIN_URL ?>/don-hang/"><i class="fas fa-shipping-fast"></i></i>Đơn hàng</a>
+            <a href="<?= $ADMIN_URL ?>/don-hang/index.php?btn_list"><i class="fas fa-shipping-fast"></i></i>Đơn hàng</a>
         </li>
 
         <li>

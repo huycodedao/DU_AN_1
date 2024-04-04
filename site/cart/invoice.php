@@ -36,7 +36,10 @@ if (isset($_POST['btn_thanh_toan'])) {
         $dbh->beginTransaction();
 
         // Tính tổng giá từ giỏ hàng
-        $tong_gia = 0; // Giả sử bạn đã tính toán tổng giá trước đó
+        $tong_gia = 0;
+        foreach ($_SESSION['cart'] as $item) {
+            $tong_gia += ($item['don_gia'] - $item['giam_gia']) * $item['sl'];
+        }
 
         // Thực thi truy vấn với dữ liệu thay thế
 
@@ -60,7 +63,7 @@ if (isset($_POST['btn_thanh_toan'])) {
         unset($_SESSION['tien']);
 
         //chuyển hướng 
-       header("location: $SITE_URL/hang-hoa/liet-ke.php");
+        header("location: $SITE_URL/hang-hoa/liet-ke.php");
         // exit;
     } catch (PDOException $e) {
         // Xảy ra lỗi, hủy bỏ giao dịch và in ra thông báo lỗi
