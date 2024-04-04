@@ -39,6 +39,7 @@ if (isset($_POST['btn_thanh_toan'])) {
         $tong_gia = 0; // Giả sử bạn đã tính toán tổng giá trước đó
 
         // Thực thi truy vấn với dữ liệu thay thế
+
         $stmt->execute([
             ':ma_kh' => $ma_kh,
             ':tong_gia' => $tong_gia,
