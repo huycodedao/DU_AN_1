@@ -7,7 +7,7 @@ require "../../global.php";
 check_login();
 
 
-extract($_REQUEST);
+extract($_REQUEST);//?
 
 
 if (exist_param("btn_list")) {
@@ -16,7 +16,7 @@ if (exist_param("btn_list")) {
     $items = hang_hoa_select_page('ma_hh', 1000);
     $VIEW_NAME = "list.php";
 } 
-else if (exist_param("btn_insert")) {
+else if (exist_param("btn_insert")) {//?
     #lấy dữ liệu từ form
     $ten_hh = $_POST['ten_hh'];
     $don_gia = $_POST['don_gia'];
@@ -41,7 +41,7 @@ else if (exist_param("btn_edit")) {
     #lấy dữ liệu từ form
     $ma_hh = $_REQUEST['ma_hh'];
     $hang_hoa_info = hang_hoa_select_by_id($ma_hh);
-    extract($hang_hoa_info);
+    extract($hang_hoa_info);//?
 
     $loai_hang = loai_select_all('ASC');
     //show dữ liệu
