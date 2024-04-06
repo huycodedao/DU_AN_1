@@ -42,6 +42,7 @@ if (isset($_POST['btn_thanh_toan'])) {
         }
 
         // Thực thi truy vấn với dữ liệu thay thế
+
         $stmt->execute([
             ':ma_kh' => $ma_kh,
             ':tong_gia' => $tong_gia,
