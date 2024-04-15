@@ -37,6 +37,15 @@
                 <i class="fas fa-comments" style="font-size: 80px;"></i>
             </div>
         </div>
+        <div class="card-single col d-flex justify-content-around bg-info text-white py-5 ml-3">
+            <div>
+                <h1 class="font-weight-bold"><?= $hoa_don ?></h1>
+                <span>Đơn hàng</span>
+            </div>
+            <div>
+                <i class="fas fa-shopping-cart" style="font-size: 80px;"></i>
+            </div>
+        </div>
         
     </div>
 </div>

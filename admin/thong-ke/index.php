@@ -11,5 +11,7 @@ if (exist_param("chart")) {
     $VIEW_NAME = "list.php";
 }
 $items = thong_ke_hang_hoa();
+$prices = thong_ke_tien();
+$price=thong_ke_doanh_thu();
 require "../layout.php";
 ?>

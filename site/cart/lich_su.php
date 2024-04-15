@@ -13,4 +13,4 @@ if (isset($_SESSION['user'])) {
     exit();
 }
 
-require '../layout.php'; // Giả sử bạn có một layout chung
+require '../layout.php'; 

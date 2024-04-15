@@ -38,9 +38,9 @@ if (!isset($items) || !is_array($items)) {
                                 <form action="cap_nhat.php" method="post">
                                     <input type="hidden" name="ma_hd" value="<?= $item['ma_hd'] ?>">
                                     <select name="trang_thai_giao_hang" onchange="this.form.submit()">
-                                        <option value="chưa giao" <?= $item['giao_hang'] == 'chưa giao' ? 'selected' : '' ?>>Chưa giao</option>
-                                        <option value="đang giao" <?= $item['giao_hang'] == 'đang giao' ? 'selected' : '' ?>>Đang giao</option>
-                                        <option value="đã giao" <?= $item['giao_hang'] == 'đã giao' ? 'selected' : '' ?>>Đã giao</option>
+                                        <option value="chưa giao" <?= $item['giao_hang'] == 'chưa giao' ? 'selected' : '' ?>>Chưa giao hàng </option>
+                                        <option value="đang giao" <?= $item['giao_hang'] == 'đang giao' ? 'selected' : '' ?>>Đang giao hàng</option>
+                                        <option value="đã giao" <?= $item['giao_hang'] == 'đã giao' ? 'selected' : '' ?>>Đã giao hàng</option>
                                     </select>
                                 </form>
                             </td>

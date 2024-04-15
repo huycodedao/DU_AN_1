@@ -4,6 +4,7 @@ require_once "../../dao/don-hang.php";
 require "../../global.php";
 
 
+check_login();
 
 
 extract($_REQUEST);

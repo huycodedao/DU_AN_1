@@ -13,6 +13,15 @@ function thong_ke_hang_hoa()
         . " GROUP BY lo.ma_loai, lo.ten_loai";
     return pdo_query($sql);
 }
+function thong_ke_tien(){
+    $sql ="SELECT SUM(don_gia) AS tong_don_gia FROM hang_hoa;";
+    return pdo_query($sql);
+}
+function thong_ke_doanh_thu(){
+    $sql ="SELECT SUM(tong_gia) AS tong_don_gia FROM hoa_don;";
+    return pdo_query($sql);
+
+}
 function thong_ke_binh_luan()
 {
     $sql = "SELECT hh.ma_hh, hh.ten_hh,"

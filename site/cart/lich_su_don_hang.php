@@ -25,6 +25,11 @@
                     <td><?= number_format($don_hang['tong_gia']) ?> VNĐ</td>
                     <td><?= $don_hang['phuong_thuc_tt'] ?></td>
                     <td><?= $don_hang['giao_hang'] ?></td>
+                    <td>
+                        <?php if ($don_hang['giao_hang'] != "đã giao"): ?>
+                            <a href="delete_order.php?ma_hd=<?= $don_hang['ma_hd'] ?>" class="btn btn-danger">Hủy đơn</a> 
+                        <?php endif; ?>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

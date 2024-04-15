@@ -1,5 +1,50 @@
 <div class="container">
     <div class="page-title">
+        <h4 class="mt-5 font-weight-bold text-center">THỐNG KÊ DOANH THU</h4>
+    </div>
+    <div class="box box-primary">
+        <div class="box-body">
+            <table width="100%" class="table table-hover table-bordered text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>TỔNG TIỀN SẢN PHẨM KHO</th>
+                        <th>TỔNG DOANH THU ĐÃ BÁN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+
+                    foreach ($prices as $item) {
+                        extract($item);
+
+                    ?>
+                    <tr>
+                        <td><?= number_format($tong_don_gia ,0) ?></td>
+                    
+                    <?php
+                    }
+
+                    ?>
+                    <?php
+                    foreach ($price as $item) {
+                        extract($item);
+
+                    ?>
+                    
+                        <td><?= number_format($tong_don_gia ,0) ?></td>
+                    </tr>
+                    <?php
+                    }
+
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="page-title">
         <h4 class="mt-5 font-weight-bold text-center">THỐNG KÊ HÀNG HÓA TỪNG LOẠI</h4>
     </div>
     <div class="box box-primary">
@@ -25,9 +70,9 @@
                     <tr>
                         <td><?= $ten_loai ?></td>
                         <td><?= $so_luong ?></td>
-                        <td>$<?= number_format($gia_min, 2) ?></td>
-                        <td>$<?= number_format($gia_max, 2) ?></td>
-                        <td>$<?= number_format($gia_avg, 2) ?></td>
+                        <td>$<?= number_format($gia_max, 0) ?></td>
+                        <td>$<?= number_format($gia_min, 0) ?></td>
+                        <td>$<?= number_format($gia_avg, 0) ?></td>
                     </tr>
                     <?php
                     }
@@ -39,3 +84,6 @@
         </div>
     </div>
 </div>
+
+
+

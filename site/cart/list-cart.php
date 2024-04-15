@@ -3,6 +3,8 @@ require '../../global.php';
 require '../../dao/hang-hoa.php';
 require '../../dao/khach-hang.php';
 //-------------------------------//
+check_login();
+
 extract($_REQUEST);
 // var_dump($_REQUEST);
 // die;
